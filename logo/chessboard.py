@@ -16,7 +16,7 @@ def DrawChessboard(width):
 
 
 DrawChessboard(8)
-
+move(90)
   
 
 
