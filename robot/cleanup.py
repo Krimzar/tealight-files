@@ -19,4 +19,6 @@ def MoveRobot():
     turn(2)
     move()
     MoveRobot()
+    
+MoveRobot()
   
