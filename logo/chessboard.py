@@ -11,7 +11,7 @@ def DrawChessboard(width):
       
     polygon(4,40)
     move(40)
-    turn(90)
+    
 
       
 
