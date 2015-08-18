@@ -15,15 +15,19 @@ def DrawChessboard(length):
 
 
 
-DrawChessboard(8)
-turn(180)
-DrawChessboard(8)
-turn(-90)
+    
+for i in range(0,8):
+  if i % 2 != 0:
+    DrawChessboard(8)
+    turn(180)
+  else:
+    DrawChessboard(8)
+    turn(-90)
 move(80)
 turn(-90)
 move(320)
 turn(-180)
-DrawChessboard(8)
+#DrawChessboard(8)
 
 
 #angle = 360 / edges
