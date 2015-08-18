@@ -34,7 +34,7 @@ def MoveRobot(path):
     move()
     path += 1
   
-  else: 
+  elif touch() == "wall" or smell() < 0: 
     for i in range(path):
       turn(-2)
       move()
