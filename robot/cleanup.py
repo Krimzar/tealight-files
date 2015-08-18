@@ -8,12 +8,15 @@ from tealight.robot import (move,
 
 def MoveRobot():
 
-  while smell() > 0: 
+  count = smell()
+  
+  while count > 0: 
     if left_side() == "fruit":
       turn(-1)
     elif right_side() == "fruit":
       turn(1)
     move()
+    count = smell()
   
   else:
     turn(2)
