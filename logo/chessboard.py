@@ -19,7 +19,9 @@ DrawChessboard(8)
 turn(90)
 move(40)
 DrawChessboard(8)
-  
+turn(90)
+move(40)
+DrawChessboard(8)
 
 
 #angle = 360 / edges
