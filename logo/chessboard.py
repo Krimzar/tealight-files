@@ -19,7 +19,7 @@ DrawChessboard(8)
 turn(180)
 DrawChessboard(8)
 turn(-90)
-move(40)
+move(80)
 
 #angle = 360 / edges
 #  decoration = size / 2
