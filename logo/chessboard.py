@@ -7,8 +7,8 @@ def polygon(edges, size):
     turn(angle)
  
 def DrawChessboard(width, length):
-  for i in range(0,12):
-    for i in range(0,12):
+  for i in range(0,8):
+    for i in range(0,8):
       polygon(4,150)
  
     
