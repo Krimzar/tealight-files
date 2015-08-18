@@ -19,7 +19,7 @@ for i in range(0, 8):
   if i % 2 == 0:
     turn(180)
   else:
-    turn(90)
+    turn(-180)
 
 
 
