@@ -18,7 +18,7 @@ def DrawChessboard(width):
 DrawChessboard(8)
 turn(180)
 DrawChessboard(8)
-DrawChessboard(8)
+move(80)
 
 #angle = 360 / edges
 #  decoration = size / 2
