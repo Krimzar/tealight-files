@@ -17,6 +17,7 @@ def MoveRobot():
       turn(1)
     move()
     count = smell()
+    print(count)
   
   else:
     turn(2)
