@@ -22,6 +22,8 @@ turn(-90)
 move(80)
 turn(-90)
 move(320)
+DrawChessboard(8)
+
 
 #angle = 360 / edges
 #  decoration = size / 2
