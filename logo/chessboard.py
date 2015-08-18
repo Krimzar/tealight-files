@@ -14,7 +14,7 @@ def DrawChessboard(width):
     #turn(90)
 
 
-for i in range(0 , 8):
+for i in range(0, 8):
   DrawChessboard(8)
   turn(180)
 
