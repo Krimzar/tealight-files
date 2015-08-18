@@ -12,6 +12,7 @@ def DrawChessboard(width, length):
       polygon(4,150)
       move(1)
       turn(90)
+    move(1)
      
 DrawChessboard(8,8)   
 
