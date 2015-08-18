@@ -11,11 +11,12 @@ def DrawChessboard(width):
       
     polygon(4,40)
     move(40)
-    
+    #turn(90)
 
       
-
-DrawChessboard(8)
+for i in range(0,8):
+  DrawChessboard(8)
+  move(80)
 
 #angle = 360 / edges
 #  decoration = size / 2
