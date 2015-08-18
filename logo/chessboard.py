@@ -15,7 +15,7 @@ def DrawChessboard(width):
 
 
 
-Drawchessboard(8)
+DrawChessboard(8)
 
   
 
