@@ -6,10 +6,17 @@ from tealight.robot import (move,
                             left_side, 
                             right_side)
 
-while smell() > 0: 
-  if left_side() == "fruit":
-    turn(-1)
-  elif right_side() == "fruit":
-    turn(1)
-  move()
+def MoveRobot():
+
+  while smell() > 0: 
+    if left_side() == "fruit":
+      turn(-1)
+    elif right_side() == "fruit":
+      turn(1)
+    move()
+  
+  else:
+    turn(2)
+    move()
+    MoveRobot()
   
