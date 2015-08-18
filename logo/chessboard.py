@@ -11,7 +11,6 @@ def DrawChessboard(width, length):
     for i in range(0,length):
       polygon(4,150)
       move(1)
-      polygon(4,150)
       turn(90)
      
 DrawChessboard(8,8)   
