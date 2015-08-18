@@ -19,7 +19,7 @@ def IfFood(Side):
     turn(1)
   move()
 
-while count > 0: 
+while count >= 0: 
   if touch() == "fruit": 
     IfFood("front")
   elif left_side() == "fruit":
