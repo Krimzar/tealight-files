@@ -1,10 +1,10 @@
 from tealight.logo import move, turn
 
 
-#def square(side): #Drawing paddles
-#  for i in range(0,4):
-#    move(side)
-#    turn(90)
+def square(side): #Drawing paddles
+  for i in range(0,4):
+    move(side)
+    turn(90)
 
 def waterwheel(edges, size): #Drawing waterwheel
   angle = 360 / edges
