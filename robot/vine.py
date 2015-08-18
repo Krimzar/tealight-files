@@ -27,7 +27,7 @@ def TurnRobot(IsFruit):
 
 def MoveRobot(): 
   while smell() > 0: 
-    TurnRobot()
+    TurnRobot(IsFruit)
     move()
   else: 
     TurnRobot("NoFruit")
