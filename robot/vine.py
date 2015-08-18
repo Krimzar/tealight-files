@@ -6,36 +6,44 @@ from tealight.robot import (move,
                             left_side, 
                             right_side)
 
-# Add your code here
 
-thing = touch()
-count = smell() #Initialise
-IsFruit = ""
 
-def TurnRobot(IsFruit):
-  if left_side() == "fruit":
-    turn(3)
+thing = touch() #Initialise
+count = smell() 
+path = 0
 
-  elif right_side() == "fruit":
-    turn(1)
+#def TurnRobot(IsFruit, path):
+  
+  #if left_side() == "fruit":
+  #  turn(3)
 
-  if IsFruit == "NoFruit":
-    for i in range(0,2):
-      turn(-1)
-      move()
-      
+ # elif right_side() == "fruit":
+   # turn(1)
+  
+ # if IsFruit == False: 
+   # turn(-2)
     
 
 def MoveRobot(): 
-  while smell() > 0: 
-    TurnRobot(IsFruit)
-    move()
-  else: 
-    TurnRobot("NoFruit")
-    MoveRobot()
-    
   
-  FruitSide = CheckFruit()
+  if left_side() == "fruit":
+    turn(3)
+  elif right_side() == "fruit":
+    turn(1)
+  move()
+  
+  path += 1
+  
+  if smell() > 0: 
+    MoveRobot()
+  else: 
+    for i in range(path):
+      turn(-2)
+      move()
+      path -= 1
+  MoveRobot()
   
 MoveRobot()
+    
+  
   
