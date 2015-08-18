@@ -11,15 +11,30 @@ from tealight.robot import (move,
 thing = touch()
 count = smell() #Initialise
 
-while count > 0:
-  if touch() == "fruit":
-    move()
-  elif left_side() == "fruit":
+def TurnRobot(IsFruit):
+  if left_side() == "fruit":
     turn(3)
+
   elif right_side() == "fruit":
     turn(1)
-  if touch() == "fruit":
-    pass
-  else:
+
+  if IsFruit == "NoFruit":
+    for i in range(0,2):
+      turn(-1)
+      move()
+      
+    
+
+def MoveRobot(): 
+  while smell() > 0: 
+    TurnRobot()
     move()
-  count = smell()
+  else: 
+    TurnRobot("NoFruit")
+    MoveRobot()
+    
+  
+  FruitSide = CheckFruit()
+  
+MoveRobot()
+  
