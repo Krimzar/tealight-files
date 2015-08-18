@@ -12,5 +12,5 @@ def DrawChessboard(width, length):
     move(1)
     turn(90)
      
-DrawChessboard(8,8)   
+DrawChessboard(2,2)   
 
