@@ -10,7 +10,7 @@ def DrawChessboard(width, length):
   for i in range(0, width):
     for i in range(0, length):
       polygon(4,150)
-      move(180)
+      move(100)
 
       
      
