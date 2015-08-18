@@ -17,11 +17,7 @@ def DrawChessboard(width):
 
 for i in range(0,8):
   DrawChessboard(8)
-  if i == 0 or i % 2 != 0: 
-    turn(180)
-  else:
-    turn(90)
-
+  turn(180)
 
 
 #angle = 360 / edges
