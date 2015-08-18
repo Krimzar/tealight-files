@@ -10,7 +10,10 @@ from tealight.robot import (move,
 
 thing = touch() #Initialise
 count = smell() 
-global path = 0
+path = 0
+
+global path
+
 
 #def TurnRobot(IsFruit, path):
   
