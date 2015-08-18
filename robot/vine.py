@@ -46,5 +46,5 @@ def MoveRobot(path):
     
    
     
-  
+MoveRobot(path)
   
