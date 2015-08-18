@@ -15,13 +15,12 @@ def DrawChessboard(width):
 
 
 
-DrawChessboard(8)
-turn(180)
-DrawChessboard(8)
-turn(90)
-DrawChessboard(8)
-turn(180)
-DrawChessboard(8)
+for i in range(0,8):
+  DrawChessboard(8)
+  if i == 0 or i % 2 != 0: 
+    turn(180)
+  else:
+    turn(90)
 
 
 
