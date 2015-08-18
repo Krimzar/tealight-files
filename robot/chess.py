@@ -12,7 +12,7 @@ thing = look() #Initialise
 count = smell()
 
 while count > 0: 
-  if touch() == "fruit":
+  if touch() == "fruit" and (right_side() != "fruit" or left_side() != "fruit"):
     move() 
   elif left_side() == "fruit":
     turn(3)
