@@ -15,8 +15,10 @@ while count > 0:
   if touch() == "fruit":
     move() 
   elif left_side() == "fruit":
+    print(left_side())
     turn(3)
   elif right_side() == "fruit":
+    print(right_side())
     turn(1)
   move()
 
