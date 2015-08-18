@@ -39,12 +39,12 @@ def MoveRobot(path):
     
   else: 
     turn(-2)
-    for i in range(0, path)
+    for i in range(0, path):
       move()
     path = 0
   MoveRobot(path)
     
-  
+   
     
   
   
