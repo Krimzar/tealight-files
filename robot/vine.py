@@ -26,23 +26,25 @@ path = 0
     
 
 def MoveRobot(path): 
-  while smell() > 0:
+  if smell() > 0:
+    
     if left_side() == "fruit":
       turn(3)
+      
     elif right_side() == "fruit":
       turn(1)
+    
     move()
     path += 1
-  
+    
   else: 
-    for i in range(path):
-      turn(-2)
-      move()
-    path = 0 
-  if touch() == "wall": 
     turn(-2)
+    for i in range(0, path)
+      move()
+    path = 0
   MoveRobot(path)
-MoveRobot(path)
+    
+  
     
   
   
