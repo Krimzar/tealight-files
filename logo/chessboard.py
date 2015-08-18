@@ -15,7 +15,7 @@ def DrawChessboard(length, width):
 
       
      
-DrawChessboard(8,8)   
+DrawChessboard(0,8)   
 
 #angle = 360 / edges
 #  decoration = size / 2
