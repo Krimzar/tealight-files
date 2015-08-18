@@ -10,7 +10,7 @@ from tealight.robot import (move,
 
 thing = look() #Initialise
 while thing == "fruit":
-  move(1)
+  move()
   
 
 
