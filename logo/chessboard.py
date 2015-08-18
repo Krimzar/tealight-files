@@ -13,11 +13,10 @@ def DrawChessboard(width):
     move(40)
     #turn(90)
 
-      
-for i in range(0,8):
-  DrawChessboard(8)
-  turn(90)
-  move(40)
+
+DrawChessboard(8)
+turn(90)
+DrawChessboard(8)
 
 #angle = 360 / edges
 #  decoration = size / 2
