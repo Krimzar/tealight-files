@@ -25,7 +25,7 @@ path = 0
    # turn(-2)
     
 
-def MoveRobot(): 
+def MoveRobot(path): 
   while smell() > 0:
     if left_side() == "fruit":
       turn(3)
@@ -39,9 +39,9 @@ def MoveRobot():
       turn(-2)
       move()
     path = 0 
-  MoveRobot()
+  MoveRobot(path)
   
-MoveRobot()
+MoveRobot(path)
     
   
   
