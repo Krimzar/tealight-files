@@ -10,6 +10,7 @@ from tealight.robot import (move,
 
 thing = touch()
 count = smell() #Initialise
+IsFruit = ""
 
 def TurnRobot(IsFruit):
   if left_side() == "fruit":
