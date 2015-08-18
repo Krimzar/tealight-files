@@ -39,9 +39,9 @@ def MoveRobot(path):
       turn(-2)
       move()
     path = 0 
-  MoveRobot(path)
   if touch() == "wall": 
     turn(-2)
+  MoveRobot(path)
 MoveRobot(path)
     
   
