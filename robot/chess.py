@@ -26,7 +26,8 @@ while count > 0:
     IfFood("left")
   elif right_side == "fruit":
     IfFood("right")
-  
+  thing = look()
+  count = smell()
   
 
 
