@@ -6,6 +6,15 @@ from tealight.robot import (move,
                             left_side, 
                             right_side)
 
-# Add your code here
-thing = look()
-print(thing)
+
+
+thing = look() #Initialise
+while thing == "fruit":
+  move(1)
+  
+
+
+
+
+#thing = look()
+#print(thing)
