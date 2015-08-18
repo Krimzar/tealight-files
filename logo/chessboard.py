@@ -6,8 +6,8 @@ def polygon(edges, size):
     move(size)
     turn(angle)
  
-def DrawChessboard(width):
-  for i in range(0, width):
+def DrawChessboard(length):
+  for i in range(0, length):
       
     polygon(4,40)
     move(40)
