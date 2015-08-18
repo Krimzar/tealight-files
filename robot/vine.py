@@ -22,4 +22,4 @@ while count > 0:
     pass
   else:
     move()
-  
+  count = smell()
