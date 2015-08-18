@@ -22,6 +22,7 @@ turn(-90)
 move(80)
 turn(-90)
 move(320)
+turn(-90)
 DrawChessboard(8)
 
 
