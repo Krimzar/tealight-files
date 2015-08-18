@@ -6,7 +6,7 @@ from tealight.robot import (move,
                             left_side, 
                             right_side)
 
-from time import sleep
+import time
 
 thing = look() #Initialise
 count = smell()
@@ -26,7 +26,7 @@ while count > 0:
     IfFood("left")
   elif right_side == "fruit":
     IfFood("right")
-  sleep(1)
+  time.sleep(1)
   thing = look()
   count = smell()
   
