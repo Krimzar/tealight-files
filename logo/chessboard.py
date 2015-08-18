@@ -20,6 +20,8 @@ turn(180)
 DrawChessboard(8)
 turn(90)
 DrawChessboard(8)
+turn(180)
+DrawChessboard(8)
 
 
 
