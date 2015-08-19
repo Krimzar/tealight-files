@@ -3,7 +3,7 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 lastx = 0
 lasty = 0
 
-hue = 0
+
 
 def handle_mousedown(x,y):
   global lastx, lasty
@@ -24,6 +24,7 @@ def handle_mousemove(x,y,button):
     line(lastx, lasty, x, y)
     lastx = x
     lasty = y
+    hue = 0
     color("hsl(%d,100%%,50%%)" % hue)
     hue = hue + 1
   
