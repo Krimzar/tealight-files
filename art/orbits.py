@@ -36,8 +36,8 @@ def handle_keyup(key):
 def handle_frame():
   global x,y,vx,vy,ax,ay, hue
   
-  #ax = ax - 0.01 * (x - (screen_width/2))
-  #ay = ay - 0.01 * (y - (screen_height/2))
+  ax = ax - 0.01 * (x - (screen_width/2))
+  ay = ay - 0.01 * (y - (screen_height/2))
   
   color("hsl(%d,100%%,50%%)" % hue)
   
