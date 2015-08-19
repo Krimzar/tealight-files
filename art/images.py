@@ -1,0 +1,1 @@
+from tealigh.art import(color, line, spot, circle
