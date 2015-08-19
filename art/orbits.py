@@ -46,7 +46,8 @@ def handle_frame():
   
   x = x + vx
   y = y + vy
-  
+  if x > screen_width:
+    vx = vx * -1
   color("hsl(%d,100%%,50%%)" % hue)
   
   spot(x,y,8)
