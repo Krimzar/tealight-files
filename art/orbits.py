@@ -47,7 +47,7 @@ def handle_frame():
   x = x + vx
   y = y + vy
   
-  color("red")
+  color("hsl(%d,100%%,50%%)" % hue)
   
   spot(x,y,8)
   
