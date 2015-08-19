@@ -25,5 +25,6 @@ def handle_mousemove(x,y,button):
     lastx = x
     lasty = y
     hue = 0
+    color(hue)
     hue + 1
   
