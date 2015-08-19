@@ -4,8 +4,8 @@ from tealight.art import screen_width, screen_height
 
 x = screen_width / 2
 y = screen_height / 2
-vx = -1
-vy = -1
+vx = 0
+vy = 0
 ax = 0
 ay = 0.01
 
@@ -44,7 +44,7 @@ def handle_frame():
   x = x + vx
   y = y + vy
   
-  color("blue")
+  color("red")
   
   spot(x,y,8)
   
