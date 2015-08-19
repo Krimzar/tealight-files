@@ -8,6 +8,7 @@ vx = 0
 vy = 0
 ax = 0
 ay = 0.01
+hue = 0
 
 power = 0.3
 
