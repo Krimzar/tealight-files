@@ -36,7 +36,9 @@ def handle_keyup(key):
 def handle_frame():
   global x,y,vx,vy,ax,ay
   
-  color("white")
+  color("hsl(%d,100%%,50%%)" % hue)
+  
+  hue += 1
   
   spot(x,y,8)
   vx = vx + ax
