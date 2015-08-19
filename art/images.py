@@ -1,7 +1,7 @@
 from tealight.art import (color, line, spot, circle, box, image, text, background)
  
-x = 0
-y = 150
+x = 150
+y = 0
  
 width = 20
 height = 8
