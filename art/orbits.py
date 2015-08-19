@@ -39,6 +39,12 @@ def handle_frame():
   ax = ax - 0.001 * (x - (screen_width/2))
   ay = ay - 0.001 * (y - (screen_height/2))
   
+  if ax > 0.001:
+    ax = 0.001
+  
+  if ay > 0.001:
+    ay = 0.001
+  
   color("hsl(%d,100%%,50%%)" % hue)
   
   hue += 1
