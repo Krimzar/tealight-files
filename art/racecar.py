@@ -22,26 +22,25 @@ class car:
   DistBD = 0.0
   DistCD = 0.0
   
-  
   def _init_(self):
     self.CoordCentre["x"] = screen_width / 2 #Determines centre of the screen as (x,y)
         
     self.CoordCentre["y"] = screen_height / 2
     
   
-    CoordA = {"x": (self.CoordCentre["x"]-15), "y": (self.CoordCentre["y"]+15)}   
-    CoordB = {"x": (self.CoordCentre["x"]-15), "y": (self.CoordCentre["y"]-15)} 
-    CoordC = {"x": (self.CoordCentre["x"]+30), "y": (self.CoordCentre["y"])}                                              
-    CoordD = {"x": (self.CoordCentre["x"]), "y": (self.CoordCentre["y"])} 
+    self.CoordA = {"x": (self.CoordCentre["x"]-15), "y": (self.CoordCentre["y"]+15)}   
+    self.CoordB = {"x": (self.CoordCentre["x"]-15), "y": (self.CoordCentre["y"]-15)} 
+    self.CoordC = {"x": (self.CoordCentre["x"]+30), "y": (self.CoordCentre["y"])}                                              
+    self.CoordD = {"x": (self.CoordCentre["x"]), "y": (self.CoordCentre["y"])} 
     #Initialise car coordinates
     
     
-    self.DistAD = sqrt((((CoordA["x"] - CoordD["x"])**2) + ((CoordA["y"] - CoordD["y"])**2)))
-    self.DistBD = sqrt((((CoordB["x"] - CoordD["x"])**2) + ((CoordB["y"] - CoordD["y"])**2)))
-    self.DistCD = CoordD["x"] - CoordC["x"] #Trigonometry to calculate orientation of racecar
+    self.DistAD = sqrt((((self.CoordA["x"] - self.CoordD["x"])**2) + ((self.CoordA["y"] - self.CoordD["y"])**2)))
+    self.DistBD = sqrt((((self.CoordB["x"] - self.CoordD["x"])**2) + ((self.CoordB["y"] - self.CoordD["y"])**2)))
+    self.DistCD = self.CoordD["x"] - CoordC["x"] #Trigonometry to calculate orientation of racecar
     
-    self.AngleA = atan((CoordD["x"] - CoordA["x"]) / (CoordD["y"] - CoordA["y"]))
-    self.AngleB = atan((CoordD["x"] - CoordB["x"]) / (CoordD["y"] - CoordB["y"]))
+    self.AngleA = atan((self.CoordD["x"] - self.CoordA["x"]) / (self.CoordD["y"] - self.CoordA["y"]))
+    self.AngleB = atan((self.CoordD["x"] - CoordB["x"]) / (self.CoordD["y"] - self.CoordB["y"]))
   
   def draw_car(self):
     
