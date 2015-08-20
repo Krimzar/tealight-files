@@ -2,7 +2,7 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from tealight.art import screen_width, screen_height
 
-from math import sin, cos, pi
+from math import sin, cos, pi, sqrt, arccos
 
 print screen_width
 print screen_height
@@ -22,6 +22,12 @@ CoordB = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]-15)}
 CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
 CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
 #Initialise car coordinates
+#AD BD CD
+
+DistAD = 
+
+
+
 
 def draw_car():
   global CoordA, CoordB, CoordC, CoordD, CoordCentre
