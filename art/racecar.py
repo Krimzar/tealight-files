@@ -39,6 +39,7 @@ def draw_car(CoordCentre, InitCount):
     
     InitCount == True
   else: 
+    pass
     
  
 
