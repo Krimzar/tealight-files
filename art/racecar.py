@@ -16,7 +16,8 @@ color("black")
 
 CoordA = {"x": CoordCenter["x"], "y": CoordCenter["y"]}   
 CoordB = {"x": CoordCenter["x"], "y": (CoordCenter["y"]-50)} 
-CoordC = {"x": (CoordCenter["x"]+100), "y": (CoordCenter["y"]-25} 
+CoordC = {"x": (CoordCenter["x"]+100), "y": (CoordCenter["y"]-25)} 
+                                             
 CoordD = {"x": (CoordCenter["x"]+50), "y": (CoordCenter["y"]-25)} 
 
 #del point["#"] to delete a point
