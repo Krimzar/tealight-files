@@ -30,9 +30,9 @@ class car:
   CoordCentre["y"] = screen_height / 2
   
 
-  CoordA = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]+15)}   
-  CoordB = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]-15)} 
-  CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
+  CoordA = {"x": (CoordCentre["x"]-14), "y": (CoordCentre["y"]+16)}   
+  CoordB = {"x": (CoordCentre["x"]-16), "y": (CoordCentre["y"]-13)} 
+  CoordC = {"x": (CoordCentre["x"]+3), "y": (CoordCentre["y"])}                                              
   CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
   #Initialise car coordinates
   
