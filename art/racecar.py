@@ -76,6 +76,8 @@ def handle_keydown(key):
   global Angle
   if key == "left":   
     change_orientation(5)
+  elif key == "right":
+    change_orientation(-5)
     
     
 def handle_frame():
