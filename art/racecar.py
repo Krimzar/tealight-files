@@ -54,7 +54,7 @@ def draw_car():
   #Initialise lines of car
 
   
-def change_orienation(Orientation): 
+def change_orientation(Orientation): 
   AngleA += Orientation
   AngleB += Orientation
   AngleC += Orientation 
