@@ -67,7 +67,7 @@ def change_orienation(Orientation):
   
   CoordC["x"] += (DistCD * sin(AngleC))
   CoordC["y"] += (DistCD * cos(AngleC))
-  
+draw_car()
   
   
 #def handle_keydown(key): 
