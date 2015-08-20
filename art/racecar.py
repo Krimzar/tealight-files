@@ -55,6 +55,9 @@ def draw_car():
 
   
 def change_orientation(Orientation): 
+  
+  global AngleA, AngleB, AngleC, DistAD, DistBD, DistCD
+  
   AngleA += Orientation
   AngleB += Orientation
   AngleC += Orientation 
