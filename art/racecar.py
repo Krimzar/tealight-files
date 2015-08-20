@@ -14,10 +14,10 @@ CoordCentre["y"] = screen_height / 2
 
 color("red")
 
-CoordA = {"x": CoordCentre["x"], "y": CoordCentre["y"]}   
-CoordB = {"x": CoordCentre["x"], "y": (CoordCentre["y"]-30)} 
-CoordC = {"x": (CoordCentre["x"]+10), "y": (CoordCentre["y"]-2.5)}                                              
-CoordD = {"x": (CoordCentre["x"]+5), "y": (CoordCentre["y"]-2.5)} 
+CoordA = {"x": CoordCentre["x"]-15, "y": (CoordCentre["y"]+15)}   
+CoordB = {"x": CoordCentre["x"]-15, "y": (CoordCentre["y"]-15)} 
+CoordC = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"]}                                              
+CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
 
 #del point["#"] to delete a point
 
