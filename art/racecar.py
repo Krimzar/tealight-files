@@ -80,7 +80,9 @@ def handle_keydown(key):
     
     
 def handle_frame():
+  box(CoordCentre["x"], CoordCentre["y"], 1000, 1000)
   draw_car()
+  
     
     
  
