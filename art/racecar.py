@@ -8,7 +8,7 @@ print screen_width
 print screen_height
 
 CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
-TotalOrientation = -90.0
+TotalOrientation = 0.0
 Acceleration = 0.0 #Initialisation of oritenation and acceleration as floats
 Speed = 0.0 
 
