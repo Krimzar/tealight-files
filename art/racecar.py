@@ -44,7 +44,7 @@ class car:
   
   def draw_car(self):
     
-    RandomNumber = randint(1, 
+    RandomNumber = randint(1, 10)
     color("red")
       
     line(self.CoordA["x"], self.CoordA["y"], self.CoordB["x"], self.CoordB["y"])
