@@ -76,8 +76,8 @@ def change_orientation(Orientation):
 def update_speed():
   global Speed, TotalOrientation
   Speed += Acceleration
-  ChangeY = cos(radians(TotalOrientation)) * Speed
-  ChangeX = -sin(radians(TotalOrientation)) * Speed
+  ChangeY = -sin(radians(TotalOrientation)) * Speed
+  ChangeX = -cos(radians(TotalOrientation)) * Speed
   
   CoordA["x"] += ChangeX
   CoordA["y"] += ChangeY
