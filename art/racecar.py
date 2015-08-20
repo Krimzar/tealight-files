@@ -50,10 +50,9 @@ def handle_frame():
     Acceleration = 1
     
   draw_car(CoordCentre, InitCount)
+
   
-  ChangeInX += Acceleration
-  
-  ChangeInY += Acceleration
+
   
 
 def handle_keydown(key): 
