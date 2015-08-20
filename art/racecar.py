@@ -7,7 +7,7 @@ from math import sin, cos, tan, pi, sqrt, acos, atan, asin, radians, degrees
 print screen_width
 print screen_height
 
-car car1 = None
+car1 = None
 
 class car:
 
