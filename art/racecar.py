@@ -25,10 +25,10 @@ def draw_car(CoordCentre, InitCount):
     
   CoordCentre["y"] = screen_height / 2
     
-  CoordA = {"x": (CoordCentre["x"]-15-ChangeInX), "y": (CoordCentre["y"]+15-ChangeInY)}   
-  CoordB = {"x": (CoordCentre["x"]-15-ChangeInX), "y": (CoordCentre["y"]-15-ChangeInY)} 
-  CoordC = {"x": (CoordCentre["x"]+30-ChangeInX), "y": (CoordCentre["y"]-ChangeInY)}                                              
-  CoordD = {"x": (CoordCentre["x"]-ChangeInX), "y": (CoordCentre["y"]-ChangeInY)} 
+  CoordA = {"x": (CoordCentre["x"]-15+ChangeInX), "y": (CoordCentre["y"]+15+ChangeInY)}   
+  CoordB = {"x": (CoordCentre["x"]-15+ChangeInX), "y": (CoordCentre["y"]-15+ChangeInY)} 
+  CoordC = {"x": (CoordCentre["x"]+30+ChangeInX), "y": (CoordCentre["y"]+ChangeInY)}                                              
+  CoordD = {"x": (CoordCentre["x"]+ChangeInX), "y": (CoordCentre["y"]+ChangeInY)} 
   #Initialise car coordinates
     
     
@@ -46,10 +46,10 @@ def draw_car(CoordCentre, InitCount):
 def handle_frame():
   
   global Power, CoordA, CoordB, CoordC, CoordD, Angle, Acceleration, CoordCentre, ChangeInX, ChangeInY
-  Acceleration = Acceleration - (0.01 * (screen_width/2))
+  Acceleration = Acceleration - (1 * (screen_width/2))
   
-  if Acceleration > 0.01 or Acceleration < 0.01:
-    Acceleration = 0.01
+  if Acceleration > 1 or Acceleration < 1:
+    Acceleration = 1
     
   draw_car(CoordCentre, InitCount)
   
