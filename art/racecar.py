@@ -4,8 +4,8 @@ from tealight.art import screen_width, screen_height
 
 from math import sin, cos, tan, pi, sqrt, acos, atan, asin, radians, degrees
 
-print screen_width
-print screen_height
+print screen_width / 2
+print screen_height / 2
 
 car1 = None
 
