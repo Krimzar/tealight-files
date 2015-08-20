@@ -11,7 +11,8 @@ CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
 InitCount = False
 Angle = 0.0
 Acceleration = 0.0 #Initialisation of angle and acceleration as floats
-
+ChangeInX = 0
+ChangeInY = 0
 
 #del point["#"] to delete a point
 
@@ -45,7 +46,7 @@ def draw_car(CoordCentre, InitCount):
 
 def handle_frame():
   
-  global CoordA, CoordB, CoordC, CoordD, Angle, Acceleration, CoordCentre
+  global CoordA, CoordB, CoordC, CoordD, Angle, Acceleration, CoordCentre, ChangeInX, ChangeInY
   Acceleration = Acceleration - (0.01 * (screen_width/2))
   
   if Acceleration > 0.01 or Acceleration < 0.01:
