@@ -2,14 +2,17 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from tealight.art import screen_width, screen_height
 
-from math import sin, cos, pi, sqrt, acos
+from math import sin, cos, tan, pi, sqrt, acos, atan, asin
 
 print screen_width
 print screen_height
 
 CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
-Angle = 0.0
-Acceleration = 0.0 #Initialisation of angle and acceleration as floats
+Orientation = 0.0
+Acceleration = 0.0 #Initialisation of oritenation and acceleration as floats
+AngleA = 0.0
+AngleB = 0.0
+AngleC = 0.0
 
 CoordCentre["x"] = screen_width / 2
     
@@ -24,8 +27,8 @@ CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])}
 #Initialise car coordinates
 #AD BD CD
 
-DistAD = acos(0.5)
-
+DistAD = sqrt((((CoordA["x"] - CoordD["x"])**2) + ((CoordA["y"] - CoordD["y"])**2)))
+print(DistAD)
 
 
 
