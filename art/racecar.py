@@ -8,11 +8,16 @@ print screen_width
 print screen_height
 
 CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
-Orientation = 0.0
+Orientation = 5.0
 Acceleration = 0.0 #Initialisation of oritenation and acceleration as floats
+
 AngleA = 0.0
 AngleB = 0.0
 AngleC = 0.0
+DistAD = 0.0
+DistBD = 0.0
+DistCD = 0.0
+
 
 CoordCentre["x"] = screen_width / 2
     
@@ -28,9 +33,12 @@ CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])}
 #AD BD CD
 
 DistAD = sqrt((((CoordA["x"] - CoordD["x"])**2) + ((CoordA["y"] - CoordD["y"])**2)))
-print(DistAD)
+DistBD = sqrt((((CoordB["x"] - CoordD["x"])**2) + ((CoordB["y"] - CoordD["y"])**2)))
+DistCD = sqrt((((CoordC["x"] - CoordD["x"])**2) + ((CoordC["y"] - CoordD["y"])**2)))
 
-
+AngleA = atan((CoordD["x"] - CoordA["x"]) / (CoordD["y"] - CoordA["y"]))
+AngleB = atan((CoordD["x"] - CoordB["x"]) / (CoordD["y"] - CoordB["y"]))
+AngleC = atan((CoordD["x"] - CoordC["x"]) / (CoordD["y"] - CoordC["y"]))
 
 def draw_car():
   global CoordA, CoordB, CoordC, CoordD, CoordCentre
@@ -46,14 +54,31 @@ def draw_car():
   line(CoordD["x"], CoordD["y"], CoordC["x"], CoordC["y"])
   #Initialise lines of car
 
-def handle_keydown(key): 
-  global Angle
-  if key == "left":   
-    Angle += 1
+  
+def change_orienation(Orientation): 
+  AngleA += Orientation
+  AngleB += Orientation
+  AngleC += Orientation 
+  
+  CoordA["x"] += (DistAD * sin(AngleA))
+  CoordA["y"] += (DistAD * cos(AngleA))
+  
+  CoordB["x"] += (DistBD * sin(AngleB))
+  CoordB["y"] += (DistBD * cos(AngleB))
+  
+  CoordC["x"] += (DistCD * sin(AngleC))
+  CoordC["y"] += (DistCD * cos(AngleC))
+  
+  
+  
+#def handle_keydown(key): 
+#  global Angle
+ # if key == "left":   
+ #   Angle += 1
     
     
-def handle_frame():
-  draw_car()
+#def handle_frame():
+ # draw_car()
     
     
  
