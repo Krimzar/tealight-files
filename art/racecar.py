@@ -54,11 +54,7 @@ class car:
     
     elif RandomNumber == 3:
       color("blue")
-    
-    elif RandomNumber == 4:
-      color("yellow")
-      
-      
+ 
     line(self.CoordA["x"], self.CoordA["y"], self.CoordB["x"], self.CoordB["y"])
     line(self.CoordA["x"], self.CoordA["y"], self.CoordD["x"], self.CoordD["y"])
     line(self.CoordB["x"], self.CoordB["y"], self.CoordD["x"], self.CoordD["y"])
