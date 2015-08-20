@@ -28,7 +28,7 @@ CoordCentre["y"] = screen_height / 2
 CoordA = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]+15)}   
 CoordB = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]-15)} 
 CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
-CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
+CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"] + 0.01)} 
 #Initialise car coordinates
 #AD BD CD
 
@@ -44,7 +44,6 @@ def draw_car():
   global CoordA, CoordB, CoordC, CoordD, CoordCentre
   
   color("red")
-    
     
   line(CoordA["x"], CoordA["y"], CoordB["x"], CoordB["y"])
   line(CoordA["x"], CoordA["y"], CoordD["x"], CoordD["y"])
