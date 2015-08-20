@@ -9,7 +9,7 @@ print screen_height
 
 CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
 Orientation = 5.0
-Acceleration = 3.0 #Initialisation of oritenation and acceleration as floats
+Acceleration = 0.0 #Initialisation of oritenation and acceleration as floats
 
 AngleA = 0.0
 AngleB = 0.0
@@ -81,7 +81,7 @@ def handle_keydown(key):
   elif key == "up": 
     CoordD["x"] += Acceleration
     CoordD["y"] += Acceleration
-    change_orientation(5)
+
     
     
     
