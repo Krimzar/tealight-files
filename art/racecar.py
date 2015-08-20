@@ -59,11 +59,11 @@ class car:
     
   def change_orientation(self, Orientation): 
     
-    self.TotalOrientation += self.Orientation
+    self.TotalOrientation += Orientation
     
-    self.AngleA += radians(self.Orientation)
-    self.AngleB += radians(self.Orientation)
-    self.AngleC += radians(self.Orientation) 
+    self.AngleA += radians(Orientation)
+    self.AngleB += radians(Orientation)
+    self.AngleC += radians(Orientation) 
     
     self.CoordA["x"] = ((self.DistAD * sin(self.AngleA)) + self.CoordD["x"])
     self.CoordA["y"] = ((self.DistAD * cos(self.AngleA)) + self.CoordD["y"])
