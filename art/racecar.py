@@ -22,7 +22,7 @@ CoordD = {"x": (CoordCentre["x"]+5), "y": (CoordCentre["y"]-2.5)}
 #del point["#"] to delete a point
 
 
-print(CoordA["x"])
+print(type(CoordA["x"]))
 
 line(CoordA["x"], CoordA["y"], CoordB["x"], CoordA["y"])
 spot(CoordCentre["x"],CoordCentre["y"],200)
