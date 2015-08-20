@@ -61,7 +61,7 @@ def handle_frame():
 def handle_keydown(key): 
   global Power
   if key == "up": #UP for acceleration key 
-    Acceleration = power
+    Acceleration = Power
   
   
 def handle_keyup(key):
