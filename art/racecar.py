@@ -11,7 +11,7 @@ CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
 TotalOrientation = 0.0
 Acceleration = 0.0 #Initialisation of oritenation and acceleration as floats
 Speed = 0.0 
-Friction = 0.01
+Friction = 0.001
 
 AngleA = 0.0
 AngleB = 0.0
@@ -80,7 +80,8 @@ def update_speed():
     Speed = 1.0
   else:
     Speed += Acceleration
-  Acceleration -= (Friction * Speed)
+  if Acceleration  > 0:
+    Acceleration -= (Friction * Speed)
   
   
   ChangeY = -cos(radians(TotalOrientation)) * Speed
