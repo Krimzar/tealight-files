@@ -59,7 +59,7 @@ def handle_frame():
   
 
 def handle_keydown(key): 
-  if key == "up" #UP for acceleration key 
+  if key == "up": #UP for acceleration key 
     Acceleration = power
   
   
