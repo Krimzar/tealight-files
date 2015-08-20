@@ -17,3 +17,24 @@ CoordD = {"x": 333, "y": 319.5}
 #del point["#"] to delete a point
 
 line(CoordA["x"], CoordA["y"], CoordB["x"], CoordA["y"])
+
+def handle_mousedown(x,y):
+  global lastx, lasty
+ 
+  lastx = x
+  lasty = y
+ 
+def handle_mousemove(x,y,button):
+  global lastx, lasty
+  print (lastx)
+  print (lasty)
+  if button == "left":
+    color("black")
+    line(lastx, lasty, x, y)
+    lastx = x
+    lasty = y
+  elif button == "right":
+    color("red")
+    line(lastx, lasty, x, y)
+    lastx = x
+    lasty = y
