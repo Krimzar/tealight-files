@@ -9,31 +9,33 @@ CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
 
 #del point["#"] to delete a point
 
-CoordCentre["x"] = screen_width / 2
-CoordCentre["y"] = screen_height / 2
+def draw_car(CoordCentre):
+  CoordCentre["x"] = screen_width / 2
+  CoordCentre["y"] = screen_height / 2
+  
+  Angle = {"x": 0.0, "y": 0.0}
+  Acceleration = 0.0 #Initialisation of angle (x,y) and acceleration as floats
+  
+  
+  
+  color("red")
+  
+  CoordA = {"x": CoordCentre["x"]-15, "y": (CoordCentre["y"]+15)}   
+  CoordB = {"x": CoordCentre["x"]-15, "y": (CoordCentre["y"]-15)} 
+  CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
+  CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
+  #Initialise car coordinates
+  
+  
+  line(CoordA["x"], CoordA["y"], CoordB["x"], CoordB["y"])
+  line(CoordA["x"], CoordA["y"], CoordD["x"], CoordD["y"])
+  line(CoordB["x"], CoordB["y"], CoordD["x"], CoordD["y"])
+  line(CoordA["x"], CoordA["y"], CoordC["x"], CoordC["y"])
+  line(CoordB["x"], CoordB["y"], CoordC["x"], CoordC["y"])
+  line(CoordD["x"], CoordD["y"], CoordC["x"], CoordC["y"])
+  #Initialise lines of car
 
-Angle = {"x": 0.0, "y": 0.0}
-Acceleration = 0.0 #Initialisation of angle (x,y) and acceleration as floats
-
-
-
-color("red")
-
-CoordA = {"x": CoordCentre["x"]-15, "y": (CoordCentre["y"]+15)}   
-CoordB = {"x": CoordCentre["x"]-15, "y": (CoordCentre["y"]-15)} 
-CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
-CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
-#Initialise car coordinates
-
-
-line(CoordA["x"], CoordA["y"], CoordB["x"], CoordB["y"])
-line(CoordA["x"], CoordA["y"], CoordD["x"], CoordD["y"])
-line(CoordB["x"], CoordB["y"], CoordD["x"], CoordD["y"])
-line(CoordA["x"], CoordA["y"], CoordC["x"], CoordC["y"])
-line(CoordB["x"], CoordB["y"], CoordC["x"], CoordC["y"])
-line(CoordD["x"], CoordD["y"], CoordC["x"], CoordC["y"])
-#Initialise lines of car
-
-def handle_
+def handle_frame():
+  
 
 
