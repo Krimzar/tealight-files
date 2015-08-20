@@ -38,10 +38,10 @@ def draw_car():
   #Initialise lines of car
 
 def handle_keydown(key): 
-  global CoordA, CoordB, CoordC, CoordD
-  if key == "down": 
+  global Angle
+  if key == "left":   
+    Angle += 1
     
-    CoordD["y"] += 50
     
 def handle_frame():
   draw_car()
