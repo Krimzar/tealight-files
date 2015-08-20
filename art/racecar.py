@@ -8,8 +8,9 @@ print screen_width
 print screen_height
 
 CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
-Orientation = 5.0
+TotalOrientation = 90
 Acceleration = 0.0 #Initialisation of oritenation and acceleration as floats
+Speed = 0.0 
 
 AngleA = 0.0
 AngleB = 0.0
@@ -55,7 +56,9 @@ def draw_car():
   
 def change_orientation(Orientation): 
   
-  global AngleA, AngleB, AngleC, DistAD, DistBD, DistCD
+  global AngleA, AngleB, AngleC, DistAD, DistBD, DistCD, TotalOrientation
+  
+  TotalOrientation += Orientation
   
   AngleA += radians(Orientation)
   AngleB += radians(Orientation)
@@ -70,23 +73,46 @@ def change_orientation(Orientation):
   CoordC["x"] = ((DistCD * sin(AngleC)) + CoordD["x"])
   CoordC["y"] = ((DistCD * cos(AngleC)) + CoordD["y"])
 
+def update_speed():
+  global Speed, TotalOrientation
+  Speed += Acceleration
+  ChangeY = sin(radians(TotalOrientation)) * Speed
+  ChangeX = cos(radians(TotalOrientation)) * Speed
+  
+  CoordA["x"] += ChangeX
+  CoordA["y"] += ChangeY
+  
+  CoordB["x"] += ChangeX
+  CoordB["y"] += ChangeY
+  
+  CoordC["x"] += ChangeX
+  CoordC["y"] += ChangeY
+  
+  CoordD["x"] += ChangeX
+  CoordD["y"] += ChangeY
   
   
 def handle_keydown(key): 
-  global Angle, Acceleration
+  global Angle
   if key == "left":   
-    change_orientation(5)
+    change_orientation(90)
   elif key == "right":
     change_orientation(-5)
   elif key == "up": 
-    CoordD["x"] += Acceleration
-    CoordD["y"] += Acceleration
+    if Acceleration > 0.3: 
+      Acceleration = 0.3
+    else:
+      Acceleration += 0.01
+    
+    
+    
     
 
     
     
     
 def handle_frame():
+  update_speed()
   color("white")
   box(0, 0, 10000, 10000)
   draw_car()
