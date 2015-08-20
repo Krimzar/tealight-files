@@ -4,10 +4,10 @@ from tealight.art import screen_width, screen_height
 
 color("#00CC00")
 
-CoordA = {"x": 0, "y": 10}   #Initialise dictionary of car coordinates
-CoordB = {"x": 0, "y": 5}
-CoordC = {"x": 10, "y": 7.5}
-CoordD = {"x": 5, "y": 7.5}
+CoordA = {"x": 328, "y": 322}   #Initialise dictionary of car coordinates
+CoordB = {"x": 328, "y": 317}
+CoordC = {"x": 338, "y": 319.5}
+CoordD = {"x": 333, "y": 319.5}
 
 #del point["#"] to delete a point
 
