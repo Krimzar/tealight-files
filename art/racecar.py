@@ -93,8 +93,8 @@ class car:
     self.ChangeY = -cos(radians(self.TotalOrientation)) * self.Speed
     self.ChangeX = -sin(radians(self.TotalOrientation)) * self.Speed
     
-    self.CoordA["x"] += self.ChangeX
-    self.CoordA["y"] += self.ChangeY
+    CoordA["x"] += ChangeX
+    CoordA["y"] += ChangeY
     
     self.CoordB["x"] += self.ChangeX
     self.CoordB["y"] += self.ChangeY
