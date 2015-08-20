@@ -81,6 +81,7 @@ def handle_keydown(key):
   elif key == "up": 
     CoordD["x"] += Acceleration
     CoordD["y"] += Acceleration
+    
 
     
     
