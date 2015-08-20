@@ -62,14 +62,14 @@ def change_orientation(Orientation):
   AngleB += Orientation
   AngleC += Orientation 
   
-  CoordA["x"] += (DistAD * degrees(sin(AngleA)))
-  CoordA["y"] += (DistAD * degrees(cos(AngleA)))
+  CoordA["x"] += (DistAD * sin(radians(AngleA)))
+  CoordA["y"] += (DistAD * cos(radians(AngleA)))
   
-  CoordB["x"] += (DistBD * degrees(sin(AngleB)))
-  CoordB["y"] += (DistBD * degrees(cos(AngleB)))
+  CoordB["x"] += (DistBD * sin(radians(AngleB)))
+  CoordB["y"] += (DistBD * cos(radians(AngleB)))
   
-  CoordC["x"] += (DistCD * degrees(sin(AngleC)))
-  CoordC["y"] += (DistCD * degrees(cos(AngleC)))
+  CoordC["x"] += (DistCD * sin(radians(AngleC)))
+  CoordC["y"] += (DistCD * cos(radians(AngleC)))
 
   
   
