@@ -40,7 +40,8 @@ def draw_car():
 def handle_keydown(key): 
   global CoordA, CoordB, CoordC, CoordD
   if key == "down": 
-    CoordC["y"] += 50
+    
+    CoordD["y"] += 50
     
 def handle_frame():
   draw_car()
