@@ -44,9 +44,20 @@ class car:
   
   def draw_car(self):
     
-    RandomNumber = randint(1, 10)
+    RandomNumber = randint(1, 4)
     
-    color("red")
+    if RandomNumber == 1:
+      color("red")
+      
+    elif RandomNumber == 2:
+      color("green")
+    
+    elif RandomNumber == 3:
+      color("blue")
+    
+    elif RandomNumber == 4:
+      color("black")
+      
       
     line(self.CoordA["x"], self.CoordA["y"], self.CoordB["x"], self.CoordB["y"])
     line(self.CoordA["x"], self.CoordA["y"], self.CoordD["x"], self.CoordD["y"])
@@ -98,10 +109,33 @@ class car:
     self.CoordD["x"] += self.ChangeX
     self.CoordD["y"] += self.ChangeY
     
-    
+def start():
+  global car1
+  car1 = car()
   
-    
+def handle_keydown(key):
+  global car1
+  
+  if key == "left":   
+    car1.change_orientation(5)
+  elif key == "right":
+    car1.change_orientation(-5)
+  elif key == "up": 
+    if car1.Acceleration > 0.05: 
+      car1.Acceleration = 0.05
+    else:
+      car1.Acceleration += 0.01
+      
+def handle_frame():
+  global car1
+  
+  car1.update_speed()
+  color("white")
+  box(0, 0, 10000, 10000)
+  car1.draw_car()
+  
 
+start()
 
 
 
