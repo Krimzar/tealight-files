@@ -57,9 +57,9 @@ def change_orientation(Orientation):
   
   global AngleA, AngleB, AngleC, DistAD, DistBD, DistCD
   
-  AngleA += Orientation
-  AngleB += Orientation
-  AngleC += Orientation 
+  AngleA += radians(Orientation)
+  AngleB += radians(Orientation)
+  AngleC += radians(Orientation) 
   
   CoordA["x"] += (DistAD * sin(radians(AngleA)))
   CoordA["y"] += (DistAD * cos(radians(AngleA)))
