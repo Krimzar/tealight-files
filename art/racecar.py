@@ -38,7 +38,6 @@ DistCD = CoordD["x"] - CoordC["x"]
 
 AngleA = atan((CoordD["x"] - CoordA["x"]) / (CoordD["y"] - CoordA["y"]))
 AngleB = atan((CoordD["x"] - CoordB["x"]) / (CoordD["y"] - CoordB["y"]))
-AngleC = atan((CoordD["x"] - CoordC["x"]) / (CoordD["y"] - CoordC["y"]))
 
 def draw_car():
   global CoordA, CoordB, CoordC, CoordD, CoordCentre
