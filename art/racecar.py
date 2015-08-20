@@ -2,6 +2,8 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from tealight.art import screen_width, screen_height
 
+from math import sin, cos, pi
+
 print screen_width
 print screen_height
 
@@ -13,8 +15,8 @@ def draw_car(CoordCentre):
   CoordCentre["x"] = screen_width / 2
   CoordCentre["y"] = screen_height / 2
   
-  Angle = {"x": 0.0, "y": 0.0}
-  Acceleration = 0.0 #Initialisation of angle (x,y) and acceleration as floats
+  Angle = 0.0
+  Acceleration = {"x": 0.0, "y": 0.0} #Initialisation of angle and acceleration as floats
   
   
   
@@ -37,6 +39,34 @@ def draw_car(CoordCentre):
 
 draw_car(CoordCentre)
 def handle_frame():
-  pass
+  global CoordA, CoordB, CoordC, CoordD, Angle
+  
+  
+def handle_keyup():
+  global Acceleration
+  if key == "left" or key == "right":
+    Acceleration["x"] = 0
+  elif key == "up" or key == "down":
+    Acceleration["y"] = 0
+
+
+
+def star(x, y, c, size, spines):
+  
+  color(c)
+  
+  angle = 0
+  
+  for i in range(0, spines):
+    x0 = x + (60 * cos(angle))
+    y0 = y + (size * sin(angle))
+    
+    line(x, y, x0, y0)
+    
+    angle = angle + (2 * pi / spines)
+
+star(300, 300, "blue", 100, 50)
+star(600, 400, "purple", 200, 100)
+star(450, 200, "orange", 125, 30)
 
 
