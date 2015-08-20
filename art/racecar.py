@@ -65,7 +65,7 @@ def handle_keydown(key):
   
 def handle_keyup(key):
   global Acceleration
-  if key == "up" 
+  if key == "up": 
     Acceleration = 0
 
 
