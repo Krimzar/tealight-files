@@ -42,8 +42,9 @@ def draw_car(CoordCentre, InitCount):
     
  
 
-def handle_frame(CoordCentre):
-  global CoordA, CoordB, CoordC, CoordD, Angle, Acceleration
+def handle_frame():
+  
+  global CoordA, CoordB, CoordC, CoordD, Angle, Acceleration, CoordCentre
   Acceleration = Acceleration - (0.01 * (screen_width/2))
   
   if Acceleration > 0.01 or Acceleration < 0.01:
