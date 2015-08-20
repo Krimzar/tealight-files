@@ -8,26 +8,25 @@ print screen_width
 print screen_height
 
 CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
-InitCount = False
 Angle = 0.0
 Acceleration = 0.0 #Initialisation of angle and acceleration as floats
 
+CoordCentre["x"] = screen_width / 2
+    
+CoordCentre["y"] = screen_height / 2
 
 #del point["#"] to delete a point
 
-def draw_car(CoordCentre, InitCount):
+CoordA = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]+15)}   
+CoordB = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]-15)} 
+CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
+CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
+#Initialise car coordinates
+
+def draw_car(CoordCentre):
+  global CoordA, CoordB, CoordC, CoordD, CoordCentre
   
   color("red")
-
-  CoordCentre["x"] = screen_width / 2
-    
-  CoordCentre["y"] = screen_height / 2
-    
-  CoordA = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]+15)}   
-  CoordB = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]-15)} 
-  CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
-  CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
-  #Initialise car coordinates
     
     
   line(CoordA["x"], CoordA["y"], CoordB["x"], CoordB["y"])
@@ -38,33 +37,17 @@ def draw_car(CoordCentre, InitCount):
   line(CoordD["x"], CoordD["y"], CoordC["x"], CoordC["y"])
   #Initialise lines of car
 
+def handle_keyup(key): 
+  global CoordA, CoordB, CoordC, CoordD
+  if key == "down": 
+    CoordD["y"] -= 1
+    
+def handle_frame():
+  draw_car(CoordCentre)
+    
     
  
 
-def handle_frame():
-  
-  global Power, CoordA, CoordB, CoordC, CoordD, Angle, Acceleration, CoordCentre, ChangeInX, ChangeInY
-  Acceleration = Acceleration - (1 * (screen_width/2))
-  
-  if Acceleration > 1 or Acceleration < 1:
-    Acceleration = 1
-    
-  draw_car(CoordCentre, InitCount)
-
-  
-
-  
-
-def handle_keydown(key): 
-  global Power
-  if key == "up": #UP for acceleration key 
-    Acceleration = Power
-  
-  
-def handle_keyup(key):
-  global Acceleration
-  if key == "up": 
-    Acceleration = 0
 
 
 
