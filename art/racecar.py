@@ -75,7 +75,11 @@ def change_orientation(Orientation):
 
 def update_speed():
   global Speed, TotalOrientation
-  Speed += Acceleration
+  if Speed > 1.0:
+    Speed = 1.0
+  else:
+    Speed += Acceleration
+  
   ChangeY = -cos(radians(TotalOrientation)) * Speed
   ChangeX = -sin(radians(TotalOrientation)) * Speed
   
@@ -99,8 +103,8 @@ def handle_keydown(key):
   elif key == "right":
     change_orientation(-5)
   elif key == "up": 
-    if Acceleration > 0.3: 
-      Acceleration = 0.3
+    if Acceleration > 0.05: 
+      Acceleration = 0.05
     else:
       Acceleration += 0.01
     
