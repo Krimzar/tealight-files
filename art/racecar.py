@@ -102,24 +102,29 @@ class car:
   
     
 def start():
+  global car1
   car1 = car()
   
-def handle_keydown(key): 
-    if key == "left":   
-      car1.change_orientation(5)
-    elif key == "right":
-      car1.change_orientation(-5)
-    elif key == "up": 
-      if car1.Acceleration > 0.05: 
-        car1.Acceleration = 0.05
-      else:
-        car1.Acceleration += 0.01
+def handle_keydown(key):
+  global car1
+  
+  if key == "left":   
+    car1.change_orientation(5)
+  elif key == "right":
+    car1.change_orientation(-5)
+  elif key == "up": 
+    if car1.Acceleration > 0.05: 
+      car1.Acceleration = 0.05
+    else:
+      car1.Acceleration += 0.01
       
 def handle_frame():
-    car1.update_speed()
-    color("white")
-    box(0, 0, 10000, 10000)
-    car1.draw_car()
+  global car1
+  
+  car1.update_speed()
+  color("white")
+  box(0, 0, 10000, 10000)
+  car1.draw_car()
   
 
 start()
