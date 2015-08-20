@@ -20,26 +20,25 @@ def draw_car(CoordCentre, InitCount):
   
   color("red")
 
-    CoordCentre["x"] = screen_width / 2
-    CoordCentre["y"] = screen_height / 2
-    CoordA = {"x": (CoordCentre["x"]-15-ChangeInX), "y": (CoordCentre["y"]+15-ChangeInY)}   
-    CoordB = {"x": (CoordCentre["x"]-15-ChangeInX), "y": (CoordCentre["y"]-15-ChangeInY)} 
-    CoordC = {"x": (CoordCentre["x"]+30-ChangeInX), "y": (CoordCentre["y"]-ChangeInY)}                                              
-    CoordD = {"x": (CoordCentre["x"]-ChangeInX), "y": (CoordCentre["y"]-ChangeInY)} 
-    #Initialise car coordinates
+  CoordCentre["x"] = screen_width / 2
+    
+  CoordCentre["y"] = screen_height / 2
+    
+  CoordA = {"x": (CoordCentre["x"]-15-ChangeInX), "y": (CoordCentre["y"]+15-ChangeInY)}   
+  CoordB = {"x": (CoordCentre["x"]-15-ChangeInX), "y": (CoordCentre["y"]-15-ChangeInY)} 
+  CoordC = {"x": (CoordCentre["x"]+30-ChangeInX), "y": (CoordCentre["y"]-ChangeInY)}                                              
+  CoordD = {"x": (CoordCentre["x"]-ChangeInX), "y": (CoordCentre["y"]-ChangeInY)} 
+  #Initialise car coordinates
     
     
-    line(CoordA["x"], CoordA["y"], CoordB["x"], CoordB["y"])
-    line(CoordA["x"], CoordA["y"], CoordD["x"], CoordD["y"])
-    line(CoordB["x"], CoordB["y"], CoordD["x"], CoordD["y"])
-    line(CoordA["x"], CoordA["y"], CoordC["x"], CoordC["y"])
-    line(CoordB["x"], CoordB["y"], CoordC["x"], CoordC["y"])
-    line(CoordD["x"], CoordD["y"], CoordC["x"], CoordC["y"])
-    #Initialise lines of car
-    
-    InitCount == True
-  else: 
-    pass
+  line(CoordA["x"], CoordA["y"], CoordB["x"], CoordB["y"])
+  line(CoordA["x"], CoordA["y"], CoordD["x"], CoordD["y"])
+  line(CoordB["x"], CoordB["y"], CoordD["x"], CoordD["y"])
+  line(CoordA["x"], CoordA["y"], CoordC["x"], CoordC["y"])
+  line(CoordB["x"], CoordB["y"], CoordC["x"], CoordC["y"])
+  line(CoordD["x"], CoordD["y"], CoordC["x"], CoordC["y"])
+  #Initialise lines of car
+
     
  
 
