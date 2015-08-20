@@ -67,17 +67,17 @@ def change_orienation(Orientation):
   
   CoordC["x"] += (DistCD * sin(AngleC))
   CoordC["y"] += (DistCD * cos(AngleC))
-draw_car()
+
   
   
-#def handle_keydown(key): 
-#  global Angle
- # if key == "left":   
- #   Angle += 1
+def handle_keydown(key): 
+  global Angle
+  if key == "left":   
+    change_orientation(5.0)
     
     
-#def handle_frame():
- # draw_car()
+def handle_frame():
+  draw_car()
     
     
  
