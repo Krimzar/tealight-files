@@ -9,38 +9,42 @@ from random import randint
 
 class car:
 
-  CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
-  TotalOrientation = 0.0 #Initialisation of total orientation moved by the car
-  Acceleration = 0.0 #Initialisation of acceleration as a float
-  Speed = 0.0 #Initialisation of speed as a float
-  Friction = 0.003 #Initialisation of friction constant
-  
-  AngleA = 0.0 #Initialises angles and distances needed for trigonometric calculcations
-  AngleB = 0.0
-  AngleC = 0.0
-  DistAD = 0.0
-  DistBD = 0.0
-  DistCD = 0.0
   
   
-  CoordCentre["x"] = screen_width / 2 #Determines centre of the screen as (x,y)
-      
-  CoordCentre["y"] = screen_height / 2
   
-
-  CoordA = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]+15)}   
-  CoordB = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]-15)} 
-  CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
-  CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
-  #Initialise car coordinates
+  def _init_(self):
+    
+    CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
+    TotalOrientation = 0.0 #Initialisation of total orientation moved by the car
+    Acceleration = 0.0 #Initialisation of acceleration as a float
+    Speed = 0.0 #Initialisation of speed as a float
+    Friction = 0.003 #Initialisation of friction constant
+    
+    AngleA = 0.0 #Initialises angles and distances needed for trigonometric calculcations
+    AngleB = 0.0
+    AngleC = 0.0
+    DistAD = 0.0
+    DistBD = 0.0
+    DistCD = 0.0
   
+    CoordCentre["x"] = screen_width / 2 #Determines centre of the screen as (x,y)
+        
+    CoordCentre["y"] = screen_height / 2
+    
   
-  DistAD = sqrt((((CoordA["x"] - CoordD["x"])**2) + ((CoordA["y"] - CoordD["y"])**2)))
-  DistBD = sqrt((((CoordB["x"] - CoordD["x"])**2) + ((CoordB["y"] - CoordD["y"])**2)))
-  DistCD = CoordD["x"] - CoordC["x"] #Trigonometry to calculate orientation of racecar
-  
-  AngleA = atan((CoordD["x"] - CoordA["x"]) / (CoordD["y"] - CoordA["y"]))
-  AngleB = atan((CoordD["x"] - CoordB["x"]) / (CoordD["y"] - CoordB["y"]))
+    CoordA = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]+15)}   
+    CoordB = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]-15)} 
+    CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
+    CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
+    #Initialise car coordinates
+    
+    
+    DistAD = sqrt((((CoordA["x"] - CoordD["x"])**2) + ((CoordA["y"] - CoordD["y"])**2)))
+    DistBD = sqrt((((CoordB["x"] - CoordD["x"])**2) + ((CoordB["y"] - CoordD["y"])**2)))
+    DistCD = CoordD["x"] - CoordC["x"] #Trigonometry to calculate orientation of racecar
+    
+    AngleA = atan((CoordD["x"] - CoordA["x"]) / (CoordD["y"] - CoordA["y"]))
+    AngleB = atan((CoordD["x"] - CoordB["x"]) / (CoordD["y"] - CoordB["y"]))
   
   def draw_car(self):
     
