@@ -12,8 +12,8 @@ CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
 CoordCentre["x"] = screen_width / 2
 CoordCentre["y"] = screen_height / 2
 
-angle = 0.0
-acceleration = 0.0 #Initialisation of angle and acceleration as floats
+Angle = {"x": 0.0, "y": 0.0}
+Acceleration = 0.0 #Initialisation of angle (x,y) and acceleration as floats
 
 
 
