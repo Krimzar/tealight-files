@@ -61,21 +61,21 @@ def change_orientation(Orientation):
   AngleB += radians(Orientation)
   AngleC += radians(Orientation) 
   
-  CoordA["x"] += (DistAD * sin(radians(AngleA)))
-  CoordA["y"] += (DistAD * cos(radians(AngleA)))
+  CoordA["x"] += (DistAD * sin(AngleA))
+  CoordA["y"] += (DistAD * cos(AngleA))
   
-  CoordB["x"] += (DistBD * sin(radians(AngleB)))
-  CoordB["y"] += (DistBD * cos(radians(AngleB)))
+  CoordB["x"] += (DistBD * sin(AngleB))
+  CoordB["y"] += (DistBD * cos(AngleB))
   
-  CoordC["x"] += (DistCD * sin(radians(AngleC)))
-  CoordC["y"] += (DistCD * cos(radians(AngleC)))
+  CoordC["x"] += (DistCD * sin(AngleC))
+  CoordC["y"] += (DistCD * cos(AngleC))
 
   
   
 def handle_keydown(key): 
   global Angle
   if key == "left":   
-    change_orientation(0.5)
+    change_orientation(5)
     
     
 def handle_frame():
