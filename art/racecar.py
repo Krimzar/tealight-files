@@ -51,7 +51,7 @@ def handle_frame():
   if Acceleration > 0.01 or Acceleration < 0.01:
     Acceleration = 0.01
     
-  draw_car(CoordCentre, InitCount, Acceleration)
+  draw_car(CoordCentre, InitCount)
   
   ChangeInX += Acceleration
   
