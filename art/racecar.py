@@ -75,7 +75,7 @@ def change_orientation(Orientation):
   CoordC["y"] = ((DistCD * cos(AngleC)) + CoordD["y"])
 
 def update_speed():
-  global Speed, TotalOrientation
+  global Speed, TotalOrientation, Acceleration
   if Speed > 1.0:
     Speed = 1.0
   else:
