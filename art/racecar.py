@@ -12,7 +12,7 @@ CoordCentre["y"] = screen_height / 2
 
 
 
-color("black")
+color("red")
 
 CoordA = {"x": CoordCentre["x"], "y": CoordCentre["y"]}   
 CoordB = {"x": CoordCentre["x"], "y": (CoordCentre["y"]-500)} 
