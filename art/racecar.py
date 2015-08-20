@@ -19,14 +19,13 @@ ChangeInY = 0
 def draw_car(CoordCentre, InitCount):
   
   color("red")
-  
-  if InitCount == False:
+
     CoordCentre["x"] = screen_width / 2
     CoordCentre["y"] = screen_height / 2
-    CoordA = {"x": CoordCentre["x"]-15, "y": (CoordCentre["y"]+15)}   
-    CoordB = {"x": CoordCentre["x"]-15, "y": (CoordCentre["y"]-15)} 
-    CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
-    CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
+    CoordA = {"x": (CoordCentre["x"]-15-ChangeInX), "y": (CoordCentre["y"]+15-ChangeInY)}   
+    CoordB = {"x": (CoordCentre["x"]-15-ChangeInX), "y": (CoordCentre["y"]-15-ChangeInY)} 
+    CoordC = {"x": (CoordCentre["x"]+30-ChangeInX), "y": (CoordCentre["y"]-ChangeInY)}                                              
+    CoordD = {"x": (CoordCentre["x"]-ChangeInX), "y": (CoordCentre["y"]-ChangeInY)} 
     #Initialise car coordinates
     
     
