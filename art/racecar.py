@@ -11,9 +11,7 @@ CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
 InitCount = False
 Angle = 0.0
 Acceleration = 0.0 #Initialisation of angle and acceleration as floats
-ChangeInX = 0
-ChangeInY = 0
-Power = 0.3
+
 
 #del point["#"] to delete a point
 
@@ -25,10 +23,10 @@ def draw_car(CoordCentre, InitCount):
     
   CoordCentre["y"] = screen_height / 2
     
-  CoordA = {"x": (CoordCentre["x"]-15+ChangeInX), "y": (CoordCentre["y"]+15+ChangeInY)}   
-  CoordB = {"x": (CoordCentre["x"]-15+ChangeInX), "y": (CoordCentre["y"]-15+ChangeInY)} 
-  CoordC = {"x": (CoordCentre["x"]+30+ChangeInX), "y": (CoordCentre["y"]+ChangeInY)}                                              
-  CoordD = {"x": (CoordCentre["x"]+ChangeInX), "y": (CoordCentre["y"]+ChangeInY)} 
+  CoordA = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]+15)}   
+  CoordB = {"x": (CoordCentre["x"]-15), "y": (CoordCentre["y"]-15)} 
+  CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
+  CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
   #Initialise car coordinates
     
     
