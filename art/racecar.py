@@ -4,9 +4,6 @@ from tealight.art import screen_width, screen_height
 
 from math import sin, cos, tan, pi, sqrt, acos, atan, asin, radians, degrees
 
-print screen_width
-print screen_height
-
 car1 = None
 
 class car:
@@ -73,15 +70,6 @@ class car:
     
     self.CoordC["x"] = ((self.DistCD * sin(self.AngleC)) + self.CoordD["x"])
     self.CoordC["y"] = ((self.DistCD * cos(self.AngleC)) + self.CoordD["y"])
-    
-    print("Ax:" , self.CoordA["x"])
-    print("Ay:" , self.CoordA["y"])
-    print("Bx:" , self.CoordB["x"])
-    print("By:" , self.CoordB["y"])
-    print("Cx:" , self.CoordC["x"])
-    print("Cy:" , self.CoordC["y"])
-    print("Dx:" , self.CoordD["x"])
-    print("Dy:" , self.CoordD["y"])
   
   def update_speed(self):
     if self.Speed > 1.0:
