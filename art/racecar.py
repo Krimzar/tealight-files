@@ -74,14 +74,14 @@ class car:
     self.CoordC["x"] = ((self.DistCD * sin(self.AngleC)) + self.CoordD["x"])
     self.CoordC["y"] = ((self.DistCD * cos(self.AngleC)) + self.CoordD["y"])
     
-    print("Ax": self.CoordA["x"])
-    print("Ay": self.CoordA["x"])
-    print("Bx": self.CoordA["x"])
-    print("By": self.CoordA["x"])
-    print("Cx": self.CoordA["x"])
-    print("Cy": self.CoordA["x"])
-    print("Dx": self.CoordA["x"])
-    print("Dy": self.CoordA["x"])
+    print("Ax:" + self.CoordA["x"])
+    print("Ay:" + self.CoordA["x"])
+    print("Bx:" + self.CoordA["x"])
+    print("By:" + self.CoordA["x"])
+    print("Cx:" + self.CoordA["x"])
+    print("Cy:" + self.CoordA["x"])
+    print("Dx:" + self.CoordA["x"])
+    print("Dy:" + self.CoordA["x"])
   
   def update_speed(self):
     if self.Speed > 1.0:
