@@ -35,6 +35,7 @@ def draw_car(CoordCentre):
   line(CoordD["x"], CoordD["y"], CoordC["x"], CoordC["y"])
   #Initialise lines of car
 
+draw_car(CoordCentre)
 def handle_frame():
   pass
 
