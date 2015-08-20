@@ -8,65 +8,82 @@ print screen_width
 print screen_height
 
 CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
+InitCount = False
+Angle = 0.0
+Acceleration = 0.0 #Initialisation of angle and acceleration as floats
+
 
 #del point["#"] to delete a point
 
-def draw_car(CoordCentre):
-  CoordCentre["x"] = screen_width / 2
-  CoordCentre["y"] = screen_height / 2
-  
-  Angle = 0.0
-  Acceleration = {"x": 0.0, "y": 0.0} #Initialisation of angle and acceleration as floats
-  
-  
+def draw_car(CoordCentre, InitCount):
   
   color("red")
   
-  CoordA = {"x": CoordCentre["x"]-15, "y": (CoordCentre["y"]+15)}   
-  CoordB = {"x": CoordCentre["x"]-15, "y": (CoordCentre["y"]-15)} 
-  CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
-  CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
-  #Initialise car coordinates
-  
-  
-  line(CoordA["x"], CoordA["y"], CoordB["x"], CoordB["y"])
-  line(CoordA["x"], CoordA["y"], CoordD["x"], CoordD["y"])
-  line(CoordB["x"], CoordB["y"], CoordD["x"], CoordD["y"])
-  line(CoordA["x"], CoordA["y"], CoordC["x"], CoordC["y"])
-  line(CoordB["x"], CoordB["y"], CoordC["x"], CoordC["y"])
-  line(CoordD["x"], CoordD["y"], CoordC["x"], CoordC["y"])
-  #Initialise lines of car
+  if InitCount == False:
+    CoordCentre["x"] = screen_width / 2
+    CoordCentre["y"] = screen_height / 2
+    CoordA = {"x": CoordCentre["x"]-15, "y": (CoordCentre["y"]+15)}   
+    CoordB = {"x": CoordCentre["x"]-15, "y": (CoordCentre["y"]-15)} 
+    CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}                                              
+    CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
+    #Initialise car coordinates
+    
+    
+    line(CoordA["x"], CoordA["y"], CoordB["x"], CoordB["y"])
+    line(CoordA["x"], CoordA["y"], CoordD["x"], CoordD["y"])
+    line(CoordB["x"], CoordB["y"], CoordD["x"], CoordD["y"])
+    line(CoordA["x"], CoordA["y"], CoordC["x"], CoordC["y"])
+    line(CoordB["x"], CoordB["y"], CoordC["x"], CoordC["y"])
+    line(CoordD["x"], CoordD["y"], CoordC["x"], CoordC["y"])
+    #Initialise lines of car
+    
+    InitCount == True
+  else: 
+    
+ 
 
-draw_car(CoordCentre)
-def handle_frame():
-  global CoordA, CoordB, CoordC, CoordD, Angle
+def handle_frame(CoordCentre):
+  global CoordA, CoordB, CoordC, CoordD, Angle, Acceleration
+  Acceleration = Acceleration - (0.01 * (screen_width/2))
+  
+  if Acceleration > 0.01 or Acceleration < 0.01:
+    Acceleration = 0.01
+    
+  draw_car(CoordCentre, InitCount, Acceleration)
+  
+  ChangeInX += Acceleration
+  
+  ChangeInY += Acceleration
+  
+
+def handle_keydown(key) 
+  if key == "up" #UP for acceleration key 
+    Acceleration = power
   
   
-def handle_keyup():
+def handle_keyup(key):
   global Acceleration
-  if key == "left" or key == "right":
-    Acceleration["x"] = 0
-  elif key == "up" or key == "down":
-    Acceleration["y"] = 0
+  if key == "up" 
+    Acceleration = 0
 
 
 
-def star(x, y, c, size, spines):
+#def star(x, y, c, size, spines):
   
-  color(c)
+#  color(c)
   
-  angle = 0
+ # angle = 0
   
-  for i in range(0, spines):
-    x0 = x + (60 * cos(angle))
-    y0 = y + (size * sin(angle))
+#  for i in range(0, spines):
+  #  x0 = x + (60 * cos(angle))
+ #   y0 = y + (size * sin(angle))
     
-    line(x, y, x0, y0)
+ #   line(x, y, x0, y0)
     
-    angle = angle + (2 * pi / spines)
+ #   angle = angle + (2 * pi / spines)
 
-star(300, 300, "blue", 100, 50)
-star(600, 400, "purple", 200, 100)
-star(450, 200, "orange", 125, 30)
+#star(300, 300, "blue", 100, 50)
+#star(600, 400, "purple", 200, 100)
+#star(450, 200, "orange", 125, 30)
 
 
