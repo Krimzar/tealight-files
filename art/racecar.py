@@ -2,7 +2,7 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from tealight.art import screen_width, screen_height
 
-from math import sin, cos, tan, pi, sqrt, acos, atan, asin
+from math import sin, cos, tan, pi, sqrt, acos, atan, asin, radians, degrees
 
 print screen_width
 print screen_height
@@ -36,9 +36,9 @@ DistAD = sqrt((((CoordA["x"] - CoordD["x"])**2) + ((CoordA["y"] - CoordD["y"])**
 DistBD = sqrt((((CoordB["x"] - CoordD["x"])**2) + ((CoordB["y"] - CoordD["y"])**2)))
 DistCD = sqrt((((CoordC["x"] - CoordD["x"])**2) + ((CoordC["y"] - CoordD["y"])**2)))
 
-AngleA = atan((CoordD["x"] - CoordA["x"]) / (CoordD["y"] - CoordA["y"]))
-AngleB = atan((CoordD["x"] - CoordB["x"]) / (CoordD["y"] - CoordB["y"]))
-AngleC = atan((CoordD["x"] - CoordC["x"]) / (CoordD["y"] - CoordC["y"]))
+AngleA = degrees(atan((CoordD["x"] - CoordA["x"]) / (CoordD["y"] - CoordA["y"])))
+AngleB = degrees(atan((CoordD["x"] - CoordB["x"]) / (CoordD["y"] - CoordB["y"])))
+AngleC = degrees(atan((CoordD["x"] - CoordC["x"]) / (CoordD["y"] - CoordC["y"])))
 
 def draw_car():
   global CoordA, CoordB, CoordC, CoordD, CoordCentre
@@ -62,14 +62,14 @@ def change_orientation(Orientation):
   AngleB += Orientation
   AngleC += Orientation 
   
-  CoordA["x"] += (DistAD * sin(AngleA))
-  CoordA["y"] += (DistAD * cos(AngleA))
+  CoordA["x"] += (DistAD * degrees(sin(AngleA)))
+  CoordA["y"] += (DistAD * degrees(cos(AngleA)))
   
-  CoordB["x"] += (DistBD * sin(AngleB))
-  CoordB["y"] += (DistBD * cos(AngleB))
+  CoordB["x"] += (DistBD * degrees(sin(AngleB)))
+  CoordB["y"] += (DistBD * degrees(cos(AngleB)))
   
-  CoordC["x"] += (DistCD * sin(AngleC))
-  CoordC["y"] += (DistCD * cos(AngleC))
+  CoordC["x"] += (DistCD * degrees(sin(AngleC)))
+  CoordC["y"] += (DistCD * degrees(cos(AngleC)))
 
   
   
