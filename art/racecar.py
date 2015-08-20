@@ -93,7 +93,7 @@ def update_speed():
   
   
 def handle_keydown(key): 
-  global Angle
+  global Angle, Acceleration
   if key == "left":   
     change_orientation(90)
   elif key == "right":
