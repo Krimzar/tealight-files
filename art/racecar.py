@@ -58,7 +58,8 @@ def handle_frame():
   ChangeInY += Acceleration
   
 
-def handle_keydown(key, power): 
+def handle_keydown(key): 
+  global Power
   if key == "up": #UP for acceleration key 
     Acceleration = power
   
