@@ -22,5 +22,5 @@ CoordD = {"x": (CoordCentre["x"]+5), "y": (CoordCentre["y"]-2.5)}
 #del point["#"] to delete a point
 
 line(CoordA["x"], CoordA["y"], CoordB["x"], CoordA["y"])
-
+spot(1000,500,200)
 
