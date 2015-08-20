@@ -2,7 +2,7 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from tealight.art import screen_width, screen_height
 
-color(00CC00)
+color(green)
 
 
 CoordA = {"x": 0, "y": 10}   #Initialise dictionary of car coordinates
