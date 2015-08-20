@@ -22,6 +22,11 @@ class car:
   DistBD = 0.0
   DistCD = 0.0
   
+  CoordA = None
+  CoordB = None
+  CoordC = None
+  CoordD = None
+  
   def _init_(self):
     self.CoordCentre["x"] = screen_width / 2 #Determines centre of the screen as (x,y)
         
