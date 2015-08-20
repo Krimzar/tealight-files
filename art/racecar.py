@@ -34,7 +34,7 @@ CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])}
 
 DistAD = sqrt((((CoordA["x"] - CoordD["x"])**2) + ((CoordA["y"] - CoordD["y"])**2)))
 DistBD = sqrt((((CoordB["x"] - CoordD["x"])**2) + ((CoordB["y"] - CoordD["y"])**2)))
-DistCD = sqrt((((CoordC["x"] - CoordD["x"])**2) + ((CoordC["y"] - CoordD["y"])**2)))
+DistCD = CoordD["x"] - CoordC["x"]
 
 AngleA = atan((CoordD["x"] - CoordA["x"]) / (CoordD["y"] - CoordA["y"]))
 AngleB = atan((CoordD["x"] - CoordB["x"]) / (CoordD["y"] - CoordB["y"]))
