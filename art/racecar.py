@@ -23,5 +23,10 @@ CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])}
 
 
 line(CoordA["x"], CoordA["y"], CoordB["x"], CoordB["y"])
+line(CoordA["x"], CoordA["y"], CoordD["x"], CoordD["y"])
+line(CoordB["x"], CoordB["y"], CoordD["x"], CoordD["y"])
+line(CoordA["x"], CoordA["y"], CoordC["x"], CoordC["y"])
+line(CoordB["x"], CoordB["y"], CoordC["x"], CoordC["y"])
+line(CoordD["x"], CoordD["y"], CoordC["x"], CoordC["y"])
 #spot(CoordCentre["x"],CoordCentre["y"],200)
 
