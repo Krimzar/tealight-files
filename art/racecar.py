@@ -24,7 +24,7 @@ CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])}
 #Initialise car coordinates
 #AD BD CD
 
-DistAD = 
+DistAD = arccos(0.5)
 
 
 
