@@ -2,7 +2,7 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from tealight.art import screen_width, screen_height
 
-from math import sin, cos, pi, sqrt, arccos
+from math import sin, cos, pi, sqrt, acos
 
 print screen_width
 print screen_height
