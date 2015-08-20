@@ -12,7 +12,7 @@ car1 = None
 class car:
 
   CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
-  TotalOrientation = -90.0 #Initialisation of total orientation moved by the car
+  TotalOrientation = 0.0 #Initialisation of total orientation moved by the car
   Acceleration = 0.0 #Initialisation of acceleration as a float
   Speed = 0.0 #Initialisation of speed as a float
   Friction = 0.003 #Initialisation of friction constant
