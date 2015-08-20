@@ -37,7 +37,7 @@ def draw_car():
   line(CoordD["x"], CoordD["y"], CoordC["x"], CoordC["y"])
   #Initialise lines of car
 
-def handle_keyup(key): 
+def handle_keydown(key): 
   global CoordA, CoordB, CoordC, CoordD
   if key == "down": 
     CoordD["y"] -= 50
