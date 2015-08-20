@@ -4,7 +4,8 @@ from tealight.art import screen_width, screen_height
 
 from math import sin, cos, tan, pi, sqrt, acos, atan, asin, radians, degrees
 
-car1 = None
+from random import randint
+
 
 class car:
 
@@ -43,6 +44,7 @@ class car:
   
   def draw_car(self):
     
+    RandomNumber = randint(1, 
     color("red")
       
     line(self.CoordA["x"], self.CoordA["y"], self.CoordB["x"], self.CoordB["y"])
