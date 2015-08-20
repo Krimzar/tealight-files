@@ -18,6 +18,9 @@ CoordD = {"x": 333, "y": 319.5}
 
 line(CoordA["x"], CoordA["y"], CoordB["x"], CoordA["y"])
 
+lastx = 0
+lasty = 0
+
 def handle_mousedown(x,y):
   global lastx, lasty
  
