@@ -23,7 +23,7 @@ CoordC = {"x": (CoordCentre["x"]+30), "y": (CoordCentre["y"])}
 CoordD = {"x": (CoordCentre["x"]), "y": (CoordCentre["y"])} 
 #Initialise car coordinates
 
-def draw_car(CoordCentre):
+def draw_car():
   global CoordA, CoordB, CoordC, CoordD, CoordCentre
   
   color("red")
@@ -43,7 +43,7 @@ def handle_keyup(key):
     CoordD["y"] -= 1
     
 def handle_frame():
-  draw_car(CoordCentre)
+  draw_car()
     
     
  
