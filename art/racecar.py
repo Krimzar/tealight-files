@@ -76,7 +76,7 @@ def change_orientation(Orientation):
 def handle_keydown(key): 
   global Angle
   if key == "left":   
-    change_orientation(5.0)
+    change_orientation(0.5)
     
     
 def handle_frame():
