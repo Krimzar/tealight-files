@@ -36,6 +36,6 @@ def draw_car(CoordCentre):
   #Initialise lines of car
 
 def handle_frame():
-  
+  pass
 
 
