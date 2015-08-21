@@ -42,27 +42,30 @@ class car:
     self.DistAD = sqrt((((self.CoordA["x"] - self.CoordD["x"])**2) + ((self.CoordA["y"] - self.CoordD["y"])**2)))
     self.DistBD = sqrt((((self.CoordB["x"] - self.CoordD["x"])**2) + ((self.CoordB["y"] - self.CoordD["y"])**2)))
     self.DistCD = self.CoordD["x"] - self.CoordC["x"] 
-    #Above geom
+    #Coordinate geometry to calculate the distances between points for each orientation
     
     
     self.AngleA = atan((self.CoordD["x"] - self.CoordA["x"]) / (self.CoordD["y"] - self.CoordA["y"]))
     self.AngleB = atan((self.CoordD["x"] - self.CoordB["x"]) / (self.CoordD["y"] - self.CoordB["y"]))
+    #Above trigonometry to calculate the angles at points for each orientation 
   
   def draw_car(self, Name):
     
     RandomNumber = randint(1, 3)
+    #Generate a random number between 1 and 3
+    
     
     if RandomNumber == 1:
-      color("red")
+      color("red") #Random number 1 = set red
       
     elif RandomNumber == 2:
-      color("green")
+      color("green") #Random number 2 = set green
     
     elif RandomNumber == 3:
-      color("blue")
+      color("blue") #Random number 3 = set blue
     
-    #color("black")
     text(self.CoordD["x"]-15, self.CoordD["y"]-35, self.Name)
+    #Sets the name of the car to a string parameter passed to the method
  
     line(self.CoordA["x"], self.CoordA["y"], self.CoordB["x"], self.CoordB["y"])
     line(self.CoordA["x"], self.CoordA["y"], self.CoordD["x"], self.CoordD["y"])
@@ -75,10 +78,12 @@ class car:
   def set_name(self, Name):
     
     self.Name = Name
+    #Method to set the name of the car
     
   def change_orientation(self, Orientation): 
     
     self.TotalOrientation += Orientation
+    #Calculates total orientation by addition of next orientation float
     
     self.AngleA += radians(Orientation)
     self.AngleB += radians(Orientation)
@@ -94,8 +99,8 @@ class car:
     self.CoordC["y"] = ((self.DistCD * cos(self.AngleC)) + self.CoordD["y"])
   
   def update_speed(self):
-    if self.Speed > 1.0:
-      self.Speed = 1.0
+    if self.Speed > 2.0:
+      self.Speed = 2.0
     else:
       self.Speed += self.Acceleration
     if self.Acceleration  > 0:
