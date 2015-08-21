@@ -88,6 +88,7 @@ class car:
     self.AngleA += radians(Orientation)
     self.AngleB += radians(Orientation)
     self.AngleC += radians(Orientation) 
+    #Calculates next angle A,B,C by addition of new orientation
     
     self.CoordA["x"] = ((self.DistAD * sin(self.AngleA)) + self.CoordD["x"])
     self.CoordA["y"] = ((self.DistAD * cos(self.AngleA)) + self.CoordD["y"])
@@ -97,18 +98,23 @@ class car:
     
     self.CoordC["x"] = ((self.DistCD * sin(self.AngleC)) + self.CoordD["x"])
     self.CoordC["y"] = ((self.DistCD * cos(self.AngleC)) + self.CoordD["y"])
+    #Calculates next coord A,B,C by trigonometry of the corresponding angle and distance relative to D
   
   def update_speed(self):
     if self.Speed > 2.0:
       self.Speed = 2.0
+      #If speed exceeds 2.0, set speed to equal 2.0 (max speed)
     else:
       self.Speed += self.Acceleration
+      #Increase speed by additon of acceleration 
     if self.Acceleration  > 0:
       self.Acceleration -= (self.Friction * self.Speed)
+      #Decreases acceleration by the friction constant multiplied by current speed. 
     
     
     self.ChangeY = -cos(radians(self.TotalOrientation)) * self.Speed
     self.ChangeX = -sin(radians(self.TotalOrientation)) * self.Speed
+    #Calculates change in (x,y) coordinates of each angle through trigonometry
     
     self.CoordA["x"] += self.ChangeX
     self.CoordA["y"] += self.ChangeY
@@ -121,35 +127,50 @@ class car:
     
     self.CoordD["x"] += self.ChangeX
     self.CoordD["y"] += self.ChangeY
+    #Updates each (x,y) key of each coord A,B,C,D by addition of the change (x,y) variables
     
 def start():
   global car1
   car1 = car()
+  #Initialising new class assigned to variable "car1"
   
 def handle_keydown(key):
   global car1
+  #Sets the scope of "car1" to global, so can be used anywhere within this program
   
   if key == "left":
     car1.change_orientation(5)
+    #Rotates orientation to left by 5 degrees if left key was pressed
   elif key == "right":
     car1.change_orientation(-5)
+    #Rotates orientation to right by 5 degrees if right key was pressed
   elif key == "up": 
     if car1.Acceleration > 0.05: 
       car1.Acceleration = 0.05
+      #Sets maximum acceleration of car to 0.05 if acceleration currently exceeds 0.05
     else:
       car1.Acceleration += 0.01
+      #Increases acceleration by a constant of 0.01 if Acceleration < 0.05
   elif key == "down":
     if car1.Acceleration == 0:
+      #Checks if acceleration = 0 and down key was pressed, to only allow deceleration when stationary
       if car1.Acceleration < -0.05:
         car1.Acceleration = -0.05
+        #Sets maximum acceleration of car to -0.05 if acceleration currently is less than -0.05
       else: 
         car1.Acceleration -= 0.01
+        #Decrements acceleration by 0.01 as car is in reverse vector movement
       
 def handle_frame():
   global car1
+  #Sets the scope of "car1" to global, so can be used anywhere within this program
   
   car1.update_speed()
+  #Calls the update_speed() method to update the speed of the car
+  
   color("white")
+  #Sets the colour of each element to white, as to clear the screen 
+  
   box(0, 0, 10000, 10000)
   car1.draw_car("Foo")
   
