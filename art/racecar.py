@@ -114,7 +114,7 @@ def handle_keydown(key):
   global car1
   
   if key == "left":
-    while key == "left:
+    while key == "left":
       car1.change_orientation(5)
   elif key == "right":
     car1.change_orientation(-5)
