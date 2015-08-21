@@ -2,7 +2,7 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from tealight.art import screen_width, screen_height
 
-from math import sin, cos, tan, pi, sqrt, acos, atan, asin, radians, degrees
+from math import sin, cos, tan, sqrt, acos, atan, asin, radians, degrees
 
 from random import randint
 
@@ -15,17 +15,22 @@ class car:
     
     
     self.CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
+    
     self.TotalOrientation = 0.0 #Initialisation of total orientation moved by the car
+    
     self.Acceleration = 0.0 #Initialisation of acceleration as a float
+    
     self.Speed = 0.0 #Initialisation of speed as a float
+    
     self.Friction = 0.003 #Initialisation of friction constant
     
-    self.AngleA = 0.0 #Initialises angles and distances needed for trigonometric calculcations
+    self.AngleA = 0.0 
     self.AngleB = 0.0
     self.AngleC = 0.0
     self.DistAD = 0.0
     self.DistBD = 0.0
     self.DistCD = 0.0
+    #Initialises angles and distances needed for trigonometric calculcations
     
     self.CoordCentre["x"] = screen_width / 2 #Determines x coord of the centre of the screen
         
@@ -172,10 +177,12 @@ def handle_frame():
   #Sets the colour of each element to white, as to clear the screen 
   
   box(0, 0, 10000, 10000)
-  car1.draw_car("Foo")
+  #Draws as new white box over the entire screen, as to clear the screen
   
+  car1.draw_car("Foo")
+  #Calls the draw_car method with parameter "Foo", so the name will be set as "Foo"
 
-start()
+start() #Calls the "car" class and the class will run 
 
 
 
