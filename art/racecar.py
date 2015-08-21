@@ -48,7 +48,7 @@ class car:
     self.AngleA = atan((self.CoordD["x"] - self.CoordA["x"]) / (self.CoordD["y"] - self.CoordA["y"]))
     self.AngleB = atan((self.CoordD["x"] - self.CoordB["x"]) / (self.CoordD["y"] - self.CoordB["y"]))
   
-  def draw_car(self):
+  def draw_car(self, Name):
     
     RandomNumber = randint(1, 3)
     
@@ -62,7 +62,7 @@ class car:
       color("blue")
     
     #color("black")
-    
+    text(self.CoordD["x"]-15, self.CoordD["y"]-35, self.Name)
  
     line(self.CoordA["x"], self.CoordA["y"], self.CoordB["x"], self.CoordB["y"])
     line(self.CoordA["x"], self.CoordA["y"], self.CoordD["x"], self.CoordD["y"])
@@ -73,9 +73,8 @@ class car:
     #Initialise lines of car
   
   def set_name(self, Name):
-    text(self.CoordD["x"]-15, self.CoordD["y"]-35, self.Name)
-  
-  
+    
+    self.Name = Name
     
   def change_orientation(self, Orientation): 
     
