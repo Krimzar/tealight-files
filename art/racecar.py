@@ -59,7 +59,7 @@ class car:
       color("blue")
     
     #color("black")
-    text(self.CoordD["x"]-7.5, self.CoordD["y"]-30, "Foo")
+    text(self.CoordD["x"]-7.5, self.CoordD["y"]-35, "Foo")
  
     line(self.CoordA["x"], self.CoordA["y"], self.CoordB["x"], self.CoordB["y"])
     line(self.CoordA["x"], self.CoordA["y"], self.CoordD["x"], self.CoordD["y"])
