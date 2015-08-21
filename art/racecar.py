@@ -47,7 +47,7 @@ class car:
   
   def draw_car(self):
     
-    RandomNumber = randint(1, 4)
+    RandomNumber = randint(1, 3)
     
     if RandomNumber == 1:
       color("red")
@@ -58,7 +58,7 @@ class car:
     elif RandomNumber == 3:
       color("blue")
     
-    color("black")
+    #color("black")
     text(self.CoordD["x"]-10, self.CoordD["y"], "Foo")
  
     line(self.CoordA["x"], self.CoordA["y"], self.CoordB["x"], self.CoordB["y"])
