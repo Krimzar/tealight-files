@@ -5,7 +5,7 @@ from tealight.art import screen_width, screen_height
 from math import sin, cos, tan, sqrt, acos, atan, asin, radians, degrees
 
 from random import randint
-
+#Importing of all required modules for the car class 
 
 class car:
   
