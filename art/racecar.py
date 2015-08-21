@@ -57,6 +57,8 @@ class car:
     
     elif RandomNumber == 3:
       color("blue")
+    
+    text(self.CoordD["x"], self.CoordD["y"], "Test")
  
     line(self.CoordA["x"], self.CoordA["y"], self.CoordB["x"], self.CoordB["y"])
     line(self.CoordA["x"], self.CoordA["y"], self.CoordD["x"], self.CoordD["y"])
@@ -107,8 +109,6 @@ class car:
     
     self.CoordD["x"] += self.ChangeX
     self.CoordD["y"] += self.ChangeY
-    
-    text(self.CoordD["x"], self.CoordD["y"], "Test")
     
 def start():
   global car1
