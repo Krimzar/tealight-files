@@ -38,7 +38,7 @@ class car:
     
     self.DistAD = sqrt((((self.CoordA["x"] - self.CoordD["x"])**2) + ((self.CoordA["y"] - self.CoordD["y"])**2)))
     self.DistBD = sqrt((((self.CoordB["x"] - self.CoordD["x"])**2) + ((self.CoordB["y"] - self.CoordD["y"])**2)))
-    self.DistCD = self.CoordD["x"] - CoordC["x"] #Trigonometry to calculate orientation of racecar
+    self.DistCD = self.CoordD["x"] - self.CoordC["x"] #Trigonometry to calculate orientation of racecar
     
     self.AngleA = atan((self.CoordD["x"] - self.CoordA["x"]) / (self.CoordD["y"] - self.CoordA["y"]))
     self.AngleB = atan((self.CoordD["x"] - CoordB["x"]) / (self.CoordD["y"] - self.CoordB["y"]))
