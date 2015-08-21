@@ -11,6 +11,9 @@ class car:
   
   def __init__(self):
     
+    self.Name = "" # Initialise name of car
+    
+    
     self.CoordCentre = {"x": 0, "y": 0} #Initialise coordinates of car centre
     self.TotalOrientation = 0.0 #Initialisation of total orientation moved by the car
     self.Acceleration = 0.0 #Initialisation of acceleration as a float
@@ -59,7 +62,7 @@ class car:
       color("blue")
     
     #color("black")
-    text(self.CoordD["x"]-15, self.CoordD["y"]-35, "Foo")
+    
  
     line(self.CoordA["x"], self.CoordA["y"], self.CoordB["x"], self.CoordB["y"])
     line(self.CoordA["x"], self.CoordA["y"], self.CoordD["x"], self.CoordD["y"])
@@ -68,6 +71,10 @@ class car:
     line(self.CoordB["x"], self.CoordB["y"], self.CoordC["x"], self.CoordC["y"])
     line(self.CoordD["x"], self.CoordD["y"], self.CoordC["x"], self.CoordC["y"])
     #Initialise lines of car
+  
+  def set_name(self, Name):
+    text(self.CoordD["x"]-15, self.CoordD["y"]-35, self.Name)
+  
   
     
   def change_orientation(self, Orientation): 
