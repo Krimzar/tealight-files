@@ -123,10 +123,11 @@ def handle_keydown(key):
     else:
       car1.Acceleration += 0.01
   elif key == "down":
-    if car1.Acceleration < -0.05:
-      car1.Acceleration = -0.05
-    else: 
-      car1.Acceleration -= 0.01
+    if Acceleration == 0:
+      if car1.Acceleration < -0.05:
+        car1.Acceleration = -0.05
+      else: 
+        car1.Acceleration -= 0.01
       
 def handle_frame():
   global car1
