@@ -151,7 +151,7 @@ def handle_frame():
   car1.update_speed()
   color("white")
   box(0, 0, 10000, 10000)
-  car1.draw_car()
+  car1.draw_car("Foo")
   
 
 start()
