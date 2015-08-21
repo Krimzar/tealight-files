@@ -41,7 +41,7 @@ class car:
     self.DistCD = self.CoordD["x"] - self.CoordC["x"] #Trigonometry to calculate orientation of racecar
     
     self.AngleA = atan((self.CoordD["x"] - self.CoordA["x"]) / (self.CoordD["y"] - self.CoordA["y"]))
-    self.AngleB = atan((self.CoordD["x"] - CoordB["x"]) / (self.CoordD["y"] - self.CoordB["y"]))
+    self.AngleB = atan((self.CoordD["x"] - self.CoordB["x"]) / (self.CoordD["y"] - self.CoordB["y"]))
   
   def draw_car(self):
     
