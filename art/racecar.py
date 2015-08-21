@@ -24,9 +24,9 @@ class car:
     self.DistBD = 0.0
     self.DistCD = 0.0
     
-    self.CoordCentre["x"] = screen_width / 2 #Determines centre of the screen as (x,y)
+    self.CoordCentre["x"] = screen_width / 2 #Determines x coord of the centre of the screen
         
-    self.CoordCentre["y"] = screen_height / 2
+    self.CoordCentre["y"] = screen_height / 2 #Determines y coord of the centre of the screen
     
   
     self.CoordA = {"x": (self.CoordCentre["x"]-15), "y": (self.CoordCentre["y"]+15)}   
@@ -38,7 +38,9 @@ class car:
     
     self.DistAD = sqrt((((self.CoordA["x"] - self.CoordD["x"])**2) + ((self.CoordA["y"] - self.CoordD["y"])**2)))
     self.DistBD = sqrt((((self.CoordB["x"] - self.CoordD["x"])**2) + ((self.CoordB["y"] - self.CoordD["y"])**2)))
-    self.DistCD = self.CoordD["x"] - self.CoordC["x"] #Trigonometry to calculate orientation of racecar
+    self.DistCD = self.CoordD["x"] - self.CoordC["x"] 
+    #Above geom
+    
     
     self.AngleA = atan((self.CoordD["x"] - self.CoordA["x"]) / (self.CoordD["y"] - self.CoordA["y"]))
     self.AngleB = atan((self.CoordD["x"] - self.CoordB["x"]) / (self.CoordD["y"] - self.CoordB["y"]))
@@ -106,6 +108,8 @@ class car:
     self.CoordD["x"] += self.ChangeX
     self.CoordD["y"] += self.ChangeY
     
+    text(CoordD["x"], CoordD["y"], "Test")
+    
 def start():
   global car1
   car1 = car()
@@ -114,8 +118,7 @@ def handle_keydown(key):
   global car1
   
   if key == "left":
-    while key == "left":
-      car1.change_orientation(5)
+    car1.change_orientation(5)
   elif key == "right":
     car1.change_orientation(-5)
   elif key == "up": 
