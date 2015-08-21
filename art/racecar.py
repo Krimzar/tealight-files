@@ -108,7 +108,7 @@ class car:
     self.CoordD["x"] += self.ChangeX
     self.CoordD["y"] += self.ChangeY
     
-    text(CoordD["x"], CoordD["y"], "Test")
+    text(self.CoordD["x"], self.CoordD["y"], "Test")
     
 def start():
   global car1
